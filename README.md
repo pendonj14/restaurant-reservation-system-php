@@ -1,2 +1,1 @@
-# restaurant-reservation-system-php
-restuarant reservation system with userpage, admin page and developer page(admin manage)
+plugins file cannot be uploaded due to large size
