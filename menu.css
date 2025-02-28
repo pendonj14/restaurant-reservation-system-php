@@ -1,0 +1,255 @@
+@keyframes fade-in{
+    0%{
+        opacity: 0 ;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+    background-image: url('images/marble.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: fade-in 2s
+}
+
+
+.left{
+    display: block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.container{
+    border-radius: 20px;
+    height: 650px;
+    width: 50%;
+    background-image: url(images/2.avif);
+    background-position-y: -120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.right {
+    background-color: transparent;
+    border:0.5px solid #e1e0da3e;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    width: 46%;
+    margin-left: 800px;
+    height: 6500px; /* Adjust based on content size */
+    overflow-y: scroll; /* Make only the right section scrollable */
+}
+
+/* Menu section header styles */
+.menu {
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-size: 6rem;
+    color: #fffaca;
+    animation: fade-in 3s;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+    margin-left: 20px;
+    transform: translateY(520px);
+}
+
+/* Menu container to hold all items */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Menu item styles */
+.menu-item {
+    background-color: transparent; /* Semi-transparent black background */
+    border-radius: 10px;
+    border:0.5px solid #e1e0da22;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+.menu-item .item-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-item h3 {
+    color: white;
+    font-size: 1.2em;
+    margin-top: -13px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+.menu-item p {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+    font-size: 0.75em;
+    margin: 5px 0;
+    margin-top: -10px;
+    text-align: justify;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    color:rgb(139, 173, 80);
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Make the menu scrollable only in the right section */
+.right {
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    height: 6500px; /* Adjust this value if content grows */
+}
+
+.menu{
+    font-family: forum, serif;
+    font-size: 200px;
+    color: #fffaca;
+    font-family: "Forum", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    transform: translateY(520px);
+    margin-left: 20px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.right{
+    background-color: rgb(111, 94, 94);
+    height: 6500px;
+    width: 46%;
+    margin-left: 800px;
+}
+
+
+
+/* Floating menu styles */
+.floating-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 21%;
+    background-color: rgb(18, 18, 17);
+    color: #fffaca;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 20px;
+    margin-left: 80px;
+    margin-top: 80px;
+    border-radius: 10px;
+  }
+  
+  /* Button styling */
+.menu-icon-button {
+    background: none;
+    border: none;
+    color: rgb(85, 107, 47);
+    cursor: pointer;
+    font-size: 30px; /* Adjust the icon size */
+    z-index: 1001;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+  
+.menu-icon-button i {
+    font-size: 29px; /* Ensure the icon size is large enough */
+  }
+  
+  /* Menu options */
+.menu-options {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    gap: 0px;
+  }
+  
+.menu-options li a {
+    color: #fffbd7;
+    text-decoration: none;
+    font-size: 11px;
+    padding: 5px 5px;
+    transition: 0.3s ease;
+  }
+
+.sub{
+    margin-top: 7px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.menu-options li a:hover {
+    background-color: #333;
+    border-radius: 5px;  
+}
+  
+  /* Dropdown menu styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1002;
+    margin-top: -69px;  /* Position it below the button */
+    margin-left: -90px;    /* Align the dropdown with the button */
+  }
+  
+.dropdown ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.dropdown ul li {
+    margin: 10px 0;
+}
+  
+.dropdown ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+  
+  .dropdown ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+  
